@@ -330,7 +330,7 @@ WHERE EMAIL LIKE '__$_%' ESCAPE '$'; -- 데이터 값으로 취급하고자 하는 값 닾에 나
 --위의 사원들이 아닌 그외의 사원들 조회
 SELECT EMP_ID, EMP_NAME, EMAIL
 FROM EMPLOYEE
-WHERE EAMIL NOT LIE '___$_%' ESCAPE'$'
+WHERE EAMIL NOT LIE '___$_%' ESCAPE'$';
 -----------------------------------------------------------------------------------------------------------
 --1. EMPLOYEE에서 이름이'연'으로 끝나는 사원들의 사원명 , 입사일 조회 해보기
 SELECT EMP_NAME, SALARY , HIRE_DATE
