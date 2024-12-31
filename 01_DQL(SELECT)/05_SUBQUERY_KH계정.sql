@@ -71,7 +71,7 @@ FROM EMPLOYEE
 WHERE SALARY = (SELECT MIN(SALARY)
                 FROM EMPLOYEE);
 
---문제3)노옹철 사원의 급여보다 더 많이 받는 사우ㅕ너들의 사번, 이름, 부서코드, 급여 조회하기
+--문제3)노옹철 사원의 급여보다 더 많이 받는 사원들의 사번, 이름, 부서코드, 급여 조회하기
 SELECT EMP_ID, DEPT_CODE, SALARY
 FROM EMPLOYEE
 WHERE SALARY > (SELECT SALARY
@@ -245,11 +245,6 @@ WHERE (DEPT_CODE, JOB_CODE) = (SELECT DEPT_CODE, JOB_CODE
 
 
 -- 박나라 사원과 같은 직급코드, 샅은 사수를 가지고 있는 사원들의 사변, 사원명 직급코드 , 사수 번호 조회
-SELECT * FROM EMPLOYEE;
-SELECT * FROM NATIONAL; 
-SELECT * FROM DEPARTMENT;
-SELECT * FROM JOB ;
-SELECT * FROM SAL_GRADE;
 
 SELECT EMP_ID ,EMP_NAME, JOB_CODE,  MANAGER_ID
 FROM EMPLOYEE 
@@ -405,50 +400,6 @@ FROM(   SELECT EMP_NAME, SALARY,
         DENSE_RANK() OVER(ORDER BY SALARY DESC) AS "순위"
         FROM EMPLOYEE)
 WHERE 순위 <=5; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
