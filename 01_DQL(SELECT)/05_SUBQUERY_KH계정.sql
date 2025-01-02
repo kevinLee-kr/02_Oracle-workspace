@@ -20,7 +20,7 @@ FROM EMPLOYEE
 WHERE DEPT_CODE=(
                 SELECT DEPT_CODE
                 FROM EMPLOYEE
-WHERE EMP_NAME = '노옹철'
+                WHERE EMP_NAME = '노옹철'
 );
 --아....오..
 --전 직원의 평균 급여보다 더 많은 급여를 받는 사원들의 사번, 이름, 직급ㅗ드, 급여 조회
