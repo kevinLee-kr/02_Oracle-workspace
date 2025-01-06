@@ -62,6 +62,7 @@ CREATE TABLE MEMBER(
     EMAIL VARCHAR2(50),
     MEM_DATE DATE
 );
+SELECT * FROM MEMBER;
 --- 이미 존재하는 객체가 있기에 다시 생성이 불가능하다.
 --- 따라서 생성하고자 하는 컬럼에 오타가 발생했을떄, 다시 만들면 될까? 덮어씌우기가 될까?
 --- 안된다. 삭제하고 다시 만들어야 한다.
