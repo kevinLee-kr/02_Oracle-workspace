@@ -128,6 +128,7 @@ CREATE TABLE MEM_NOTNULL(
     PHONE VARCHAR2(13),
     EMAIL VARCHAR2(50)
 );
+CREATE TABLE RR();
 SELECT * FROM MEM_NOTNULL;
 
 INSERT INTO MEM_NOTNULL VALUES(1,'user01','pass01','이병헌','남',null,null);
@@ -268,6 +269,14 @@ INSERT INTO MEM_PRI VALUES(2,'user02','pass02','자메인 대포',null,null,null);
 --ORA-00001: unique constraint (DDL.MEMNO_PK) violated
 --기본키에 NULL을 담으려고 할떄(NOT NULL 제약조건에 위배된다. )
 
+/*
+Composite key (복합키)
+두개 이상의 컬럼을 묶어서 하나의 기본키로 지정하는것.
+기본키는 하나의 테이블에 하나만 존재할 수 있다, 또한 기본키는 하나 이상의 컬럼으로 구성되어 있다.
+기본키가 만약 복합키라면, 복합키 또한 당연히 유일성과 최소성을 만족해야한다.
+*/
+
+
 CREATE TABLE MEM_PRI2(
     MEM_NO NUMBER ,
     MEM_ID VARCHAR2(20) NOT NULL UNIQUE, 
@@ -293,7 +302,7 @@ INSERT INTO MEM_PRI2 VALUES(NULL,'user02','pass02','손흥밍','남','12-12-12',null
 -- 어떤 회원이 어떤 상품을 찜하는지에 대한 데이터를 보관하는 테이블.
 */
 
-CREATE TABLE TB_LIKE(
+    CREATE TABLE TB_LIKE(
     MEM_NO NUMBER, 
     PRODUCT_NAME VARCHAR2(30),
     LIKE_DATE DATE,
